@@ -20,15 +20,15 @@ import modelo.*;
 public class Controlador implements ActionListener {
 
     private final Menu startMenu;
-    private final Jogo startJogo;
     private final Instrucciones startInstrucciones;
+    private final Jogo startJogo;
     private final Tablero startTablero;
     private final Juego startJuego;
 
     public Controlador(Menu startMenu, Instrucciones startInstrucciones,Jogo startJogo, Tablero startTablero, Juego startJuego) {
         this.startMenu = startMenu;
-        this.startJogo = startJogo;
         this.startInstrucciones = startInstrucciones;
+        this.startJogo = startJogo;
         this.startTablero = startTablero;
         this.startJuego = startJuego;
         
@@ -84,12 +84,13 @@ public class Controlador implements ActionListener {
             if(e.getSource()==startMenu.getBoton_instucciones()){
                 MostrarInstrucciones();
             }else if(e.getSource()==startMenu.getBoton_jugar()){     //<----------- aca los botones del menu(jugar,salir,ver las instrucciones)
-                //funcion jugar que todavia no has hecho capo...
+                MostrarJuego();
             }else if(e.getSource()==startMenu.getBoton_salir()){
                 salirJuego();
             }else if(e.getSource()==startInstrucciones.getBoton_volver()){  //<---------aca el boton de volver en las instrucciones
                 volverInicio();
-            }                        //<---------aca tenes que seguir metiendo shits
+            }
+                //<---------aca tenes que seguir metiendo shits
         }catch(Exception ex){
             System.out.println("ERROR...");
             ex.printStackTrace();
@@ -111,6 +112,12 @@ public class Controlador implements ActionListener {
     //salir
     private void salirJuego() {
         System.exit(0);
+    }
+    
+    private void MostrarJuego(){
+        startMenu.dispose();
+        startJogo.setVisible(true);
+        
     }
     
 }
