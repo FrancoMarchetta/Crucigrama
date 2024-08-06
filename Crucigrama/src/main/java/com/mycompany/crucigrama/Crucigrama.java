@@ -21,15 +21,17 @@ public class Crucigrama {
         
         //-----------------------
          Menu startMenu = new Menu();
-        Instrucciones instrucciones = new Instrucciones();
-        Jogo jogo = new Jogo();
+        Instrucciones startInstrucciones = new Instrucciones();
+        Jogo startJogo = new Jogo();
 
         // Instanciación del modelo
-        Juego juego = new Juego();
-        Tablero tablero = new Tablero();
+        Juego startJuego = new Juego();
+        Tablero startTablero = new Tablero();
 
         // Instanciación del controlador
-        Controlador controlador = new Controlador(startMenu, instrucciones, jogo, juego, tablero);
-
+        Controlador controlador = new Controlador(startMenu, startInstrucciones, startJogo, startTablero, startJuego);
+        
+        startMenu.setVisible(true);
+        
     }
 }
