@@ -93,7 +93,7 @@ public class Instrucciones extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("Instrucciones");
 
-        jTextArea1.setBackground(new java.awt.Color(51, 0, 255));
+        jTextArea1.setBackground(new java.awt.Color(153, 204, 255));
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jTextArea1.setRows(5);
