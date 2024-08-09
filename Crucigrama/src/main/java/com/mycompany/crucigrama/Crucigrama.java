@@ -20,6 +20,7 @@ public class Crucigrama {
         
         
         //-----------------------
+        //instanciacion de la vista
          Menu startMenu = new Menu();
         Instrucciones startInstrucciones = new Instrucciones();
         Jogo startJogo = new Jogo();
@@ -27,7 +28,9 @@ public class Crucigrama {
         // Instanciación del modelo
         Juego startJuego = new Juego();
         Tablero startTablero = new Tablero();
-
+        
+        
+        
         // Instanciación del controlador
         Controlador controlador = new Controlador(startMenu, startInstrucciones, startJogo, startTablero, startJuego);
         

@@ -118,6 +118,10 @@ public class Controlador implements ActionListener {
         startMenu.dispose();
         startJogo.setVisible(true);
         
+        String[][] tablero = startTablero.IniciarTablero();
+        startTablero.MostrarTablero(tablero);
     }
+    
+    
     
 }

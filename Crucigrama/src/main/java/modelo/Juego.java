@@ -4,10 +4,16 @@
  */
 package modelo;
 
+import vista.*;
+
+
 /**
  *
  * @author frncm
  */
 public class Juego {
+    int puntaje; 
+    
+    
     
 }

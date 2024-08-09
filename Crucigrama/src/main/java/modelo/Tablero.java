@@ -30,14 +30,18 @@ public class Tablero {
         return tablero;
     }
     
-    public void MostrarTablero(String[][] tablero){
-        for(int i = 0; i<13; i++){
-            for(int j = 0; j<11; j++){
-                System.out.println(tablero[i][j] + " ");
-                }
-            System.out.println();
+    
+    
+    
+   public void MostrarTablero(String[][] tablero) {
+    for (int i = 0; i < 13; i++) {
+        for (int j = 0; j < 11; j++) {
+            System.out.print(" " + tablero[i][j]);
         }
+        System.out.println(" ");
     }
+}
+
     
     
     
