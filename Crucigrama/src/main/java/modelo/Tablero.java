@@ -9,12 +9,23 @@ package modelo;
  * @author frncm
  */
 public class Tablero {
-        String[][] tablero;
+        static String[][] tablero;
 
    
     public Tablero() {
         this.tablero = new String[13][11];
     }
+
+    public static String[][] getTablero() {
+        return tablero;
+    }
+
+    public static void setTablero(String[][] tablero) {
+        Tablero.tablero = tablero;
+    }
+    
+    
+    
     
     
     
@@ -33,20 +44,21 @@ public class Tablero {
     
     
     
-   public void MostrarTablero(String[][] tablero) {
+   public static String[][] MostrarTablero(String[][] tablero) {
     for (int i = 0; i < 13; i++) {
         for (int j = 0; j < 11; j++) {
             System.out.print(" " + tablero[i][j]);
         }
         System.out.println(" ");
     }
+    return tablero;
 }
 
     
     
     
     public static String[][] iniciarTableroResuelto() {
-        return new String[][] {
+        String[][] resuelto = {
             {" ", " ", " ", " ", " ", " ", " ", "C", " ", " ", " ", " ", " "},
             {" ", " ", " ", " ", " ", " ", " ", "A", " ", " ", " ", " ", " "},
             {" ", " ", " ", " ", "E", " ", " ", "M", " ", " ", " ", " ", " "},
@@ -59,5 +71,24 @@ public class Tablero {
             {" ", " ", " ", " ", "T", " ", " ", " ", " ", "O", " ", " ", " "},
             {" ", " ", " ", " ", "E", " ", " ", " ", " ", " ", " ", " ", " "}
         };
+        
+        return resuelto;
+    }
+    
+    
+    
+    public static boolean compararTableros(){
+        boolean tablerosSonIguales = (false);
+        
+        if (MostrarTablero(tablero) == iniciarTableroResuelto()) {
+            tablerosSonIguales = (true);
+            System.out.println("ESTA BIEN. LOS TABLEROS SON IGUALES");
+        }else{
+            tablerosSonIguales = (false);
+            System.out.println("ESTA MAL. LOS TABLEROS SON DISTINTOS");
+        }
+        return tablerosSonIguales;
+        
+        
     }
 }

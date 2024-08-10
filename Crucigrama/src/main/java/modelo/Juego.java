@@ -12,7 +12,9 @@ import vista.*;
  * @author frncm
  */
 public class Juego {
-    int puntaje; 
+    int puntaje;
+    
+    
     
     
     

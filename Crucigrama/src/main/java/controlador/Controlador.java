@@ -6,6 +6,8 @@ package controlador;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import vista.*;
 import modelo.*;
 
@@ -31,7 +33,7 @@ public class Controlador implements ActionListener {
         this.startJogo = startJogo;
         this.startTablero = startTablero;
         this.startJuego = startJuego;
-        
+        //todos los action listeners:
         this.startMenu.getBoton_instucciones().addActionListener(this);
         this.startMenu.getBoton_jugar().addActionListener(this);
         this.startMenu.getBoton_salir().addActionListener(this);
@@ -73,6 +75,12 @@ public class Controlador implements ActionListener {
         this.startJogo.getE32().addActionListener(this);
         this.startJogo.getE33().addActionListener(this);
         this.startJogo.getE34().addActionListener(this);
+        
+        
+       
+
+        
+        
     }
 
     
@@ -89,8 +97,12 @@ public class Controlador implements ActionListener {
                 salirJuego();
             }else if(e.getSource()==startInstrucciones.getBoton_volver()){  //<---------aca el boton de volver en las instrucciones
                 volverInicio();
+            }else if(e.getSource()==startJogo.getBtnTerminar()){
+                botonComparar();
+            }if(e.getSource() == startJogo.getE1()){
+                startTablero.getTablero()[3][0] = startJogo.getE1().getText();
+                startTablero.MostrarTablero(startTablero.getTablero());
             }
-                //<---------aca tenes que seguir metiendo shits
         }catch(Exception ex){
             System.out.println("ERROR...");
             ex.printStackTrace();
@@ -120,6 +132,10 @@ public class Controlador implements ActionListener {
         
         String[][] tablero = startTablero.IniciarTablero();
         startTablero.MostrarTablero(tablero);
+    }
+    
+    private void botonComparar(){
+      startTablero.compararTableros();
     }
     
     
