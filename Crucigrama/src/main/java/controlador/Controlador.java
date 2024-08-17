@@ -132,7 +132,7 @@ public class Controlador implements ActionListener {
     }
     
     private void botonComparar(){
-      startTablero.compararTableros(modelo.Tablero.tablero);
+      startTablero.compararTableros(modelo.Tablero.tablero, modelo.Tablero.resuelto);
     }
     
     

@@ -10,10 +10,11 @@ package modelo;
  */
 public class Tablero {
         static public String[][] tablero;
-
+        static public String[][] resuelto;
    
     public Tablero() {
         this.tablero = new String[11][13];
+        this.resuelto = new String[11][13];
     }
 
     public  String[][] getTablero() {
@@ -24,6 +25,34 @@ public class Tablero {
         Tablero.tablero = tablero;
     }
     
+    public static String[][] iniciarTableroResuelto() {
+        String[][] resuelto = {
+            {" ", " ", " ", " ", " ", " ", " ", "C", " ", " ", " ", " ", " "},
+            {" ", " ", " ", " ", " ", " ", " ", "A", " ", " ", " ", " ", " "},
+            {" ", " ", " ", " ", "E", " ", " ", "M", " ", " ", " ", " ", " "},
+            {"C", "E", "R", "A", "M", "I", "C", "A", " ", " ", " ", " ", " "},
+            {" ", "X", " ", " ", "E", " ", " ", "R", " ", " ", " ", " ", " "},
+            {" ", "I", " ", " ", "R", " ", " ", "A", "M", "A", "B", "L", "E"},
+            {" ", "T", " ", " ", "G", " ", " ", " ", " ", "M", " ", " ", " "},
+            {" ", "O", " ", " ", "E", " ", " ", " ", " ", "I", " ", " ", " "},
+            {" ", " ", " ", " ", "N", " ", " ", " ", " ", "G", " ", " ", " "},
+            {" ", " ", " ", " ", "T", " ", " ", " ", " ", "O", " ", " ", " "},
+            {" ", " ", " ", " ", "E", " ", " ", " ", " ", " ", " ", " ", " "}
+        };
+        
+        return resuelto;
+    }
+    
+    public static void mostrarResuelto(String[][] resuelto){
+        
+        for (int i = 0; i < 11; i++) {
+            for (int j = 0; j < 13; j++) {
+                System.out.print(" " + resuelto[i][j]);
+            }
+        System.out.println(" ");
+    }
+        
+    }
     
     
     
@@ -34,7 +63,7 @@ public class Tablero {
             
         for(int i = 0; i<11; i++){
             for (int j = 0; j<13; j++){              //<---Crea el tablero vacio
-                tablero[i][j] = "0";
+                tablero[i][j] = " ";
             }
             System.out.println();
         }
@@ -57,27 +86,11 @@ public class Tablero {
     
     
     
-    public static String[][] iniciarTableroResuelto() {
-        String[][] resuelto = {
-            {" ", " ", " ", " ", " ", " ", " ", "C", " ", " ", " ", " ", " "},
-            {" ", " ", " ", " ", " ", " ", " ", "A", " ", " ", " ", " ", " "},
-            {" ", " ", " ", " ", "E", " ", " ", "M", " ", " ", " ", " ", " "},
-            {"C", "E", "R", "A", "M", "I", "C", "A", " ", " ", " ", " ", " "},
-            {" ", "X", " ", " ", "E", " ", " ", "R", " ", " ", " ", " ", " "},
-            {" ", "I", " ", " ", "R", " ", " ", "A", "M", "A", "B", "L", "E"},
-            {" ", "T", " ", " ", "G", " ", " ", " ", " ", "M", " ", " ", " "},
-            {" ", "O", " ", " ", "E", " ", " ", " ", " ", "I", " ", " ", " "},
-            {" ", " ", " ", " ", "N", " ", " ", " ", " ", "G", " ", " ", " "},
-            {" ", " ", " ", " ", "T", " ", " ", " ", " ", "O", " ", " ", " "},
-            {" ", " ", " ", " ", "E", " ", " ", " ", " ", " ", " ", " ", " "}
-        };
-        
-        return resuelto;
-    }
     
     
     
-    public boolean compararTableros(String[][] tablero){
+    
+    public boolean compararTableros(String[][] tablero, String[][] resuelto){
         boolean tablerosSonIguales = (false);
         
         tablero[3][0] = vista.Jogo.e1.getText();
@@ -116,19 +129,27 @@ public class Tablero {
         tablero[9][9] = vista.Jogo.e34.getText();
         
 
+        for(int i = 0; i<11; i++){
+            for(int j = 0; j<13; j++){
+                if (tablero[i][j] == resuelto[i][j]) {
+                tablerosSonIguales = (true);
+                System.out.println("ESTA BIEN. LOS TABLEROS SON IGUALES");
+                MostrarTablero(tablero);
+                System.out.println("--------------------------------");
+                mostrarResuelto(resuelto);
+                }else{
+                    tablerosSonIguales = (false);
+                    System.out.println("ESTA MAL. LOS TABLEROS SON DISTINTOS");
+                    MostrarTablero(tablero);
+                    System.out.println("--------------------------------");
+                    mostrarResuelto(resuelto);
 
+                }
+           }
+       }
         
         
-        if (MostrarTablero(tablero) == iniciarTableroResuelto()) {
-            tablerosSonIguales = (true);
-            System.out.println("ESTA BIEN. LOS TABLEROS SON IGUALES");
-            MostrarTablero(tablero);
-        }else{
-            tablerosSonIguales = (false);
-            System.out.println("ESTA MAL. LOS TABLEROS SON DISTINTOS");
-            MostrarTablero(tablero);
-
-        }
+        
         
         return tablerosSonIguales;
         
