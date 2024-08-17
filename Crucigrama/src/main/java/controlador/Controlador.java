@@ -10,6 +10,7 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import vista.*;
 import modelo.*;
+import java.io.File; 
 
 
 
@@ -108,8 +109,11 @@ public class Controlador implements ActionListener {
     }
     //mostrar instrucciones
     private void MostrarInstrucciones(){
+        /*
         startMenu.dispose();
         startInstrucciones.setVisible(true);
+        */
+        
     }
     
     //volver de las instrucciones al menu

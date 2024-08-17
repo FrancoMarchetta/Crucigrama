@@ -98,7 +98,6 @@ public class Tablero {
     
     
     public boolean compararTableros(String[][] tablero, String[][] resuelto){
-        boolean tablerosSonIguales = (false);
         String[][] res;
         
         res = iniciarTableroResuelto();
@@ -141,35 +140,31 @@ public class Tablero {
         
         
 
-        for(int i = 0; i<11; i++){
-            for(int j = 0; j<13; j++){
-                if (tablero[i][j] == res[i][j]) {
-                tablerosSonIguales = (true);
-                
-                
-                }else{
-                    tablerosSonIguales = (false);
-                    
-                    
+         boolean tablerosSonIguales = true;
 
-                }
-           }
-       }
-        
-        if(tablerosSonIguales == (true)){
-            System.out.println("Ganaste");
-            
-        }else{
-            System.out.println("perdiste");
+    for (int i = 0; i < 11; i++) {
+        for (int j = 0; j < 13; j++) {
+            if (!tablero[i][j].equals(res[i][j])) {
+                tablerosSonIguales = false;
+                System.out.println("ESTA MAL. LOS TABLEROS SON DISTINTOS");
+                MostrarTablero(tablero);
+                System.out.println("--------------------------------");
+                mostrarResuelto(tablero,res);
+                return false; // Sale del método si encuentra una diferencia
+            }
         }
+    }
+
+    // Si recorrió todo el tablero y no encontró diferencias
+    System.out.println("ESTÁ BIEN. LOS TABLEROS SON IGUALES");
+    MostrarTablero(tablero);
+    System.out.println("--------------------------------");
+    mostrarResuelto(tablero,res);
+    return tablerosSonIguales;
         
-        MostrarTablero(tablero);
-        System.out.println("--------------------------------");
-        mostrarResuelto(resuelto,res);
         
         
         
-        return tablerosSonIguales;
         
         
     }
