@@ -1,0 +1,41 @@
+[33mcommit 4cbf47e18a7a2e8bf53e02b517a8d4de3ee21a26[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Franco <frncmarchetta@gmail.com>
+Date:   Sat Aug 10 16:24:06 2024 -0300
+
+    || funcion para comparar matrices en consola  || falta agregar document listeners para mantener actualizada la matriz sin resolver y poder comparar con la resuelta ||
+
+[33mcommit 7250a99d2763a12383e4d554b9bd1ff8dcf956f3[m
+Author: Franco <frncmarchetta@gmail.com>
+Date:   Fri Aug 9 13:25:42 2024 -0300
+
+    || creo que no hice practicamente nada || ahora la matriz se muestra en consola y supongo que es un avance ||
+
+[33mcommit 6553e38a410f87a6f121e097669e6d59763c95ce[m
+Author: Franco <frncmarchetta@gmail.com>
+Date:   Wed Aug 7 21:30:32 2024 -0300
+
+    || cambia el color de las instrucciones en la vista || empiezo a hacer el modelo ||
+
+[33mcommit a1c6a93bf6b48301e097a1e99c94fb284204dd96[m
+Author: Franco <frncmarchetta@gmail.com>
+Date:   Tue Aug 6 20:38:00 2024 -0300
+
+    ||funcion de boton jugar||falta la logica del juego(MODELO)||
+
+[33mcommit ae3c27e717ec0e304a9eb4b3730219e264f9af5e[m
+Author: Franco <frncmarchetta@gmail.com>
+Date:   Tue Aug 6 13:34:15 2024 -0300
+
+    ||controlador arreglado||
+
+[33mcommit b4ec4cdf832f1b349fbae709e5e6df6160d63394[m
+Author: Franco <frncmarchetta@gmail.com>
+Date:   Sun Aug 4 23:29:41 2024 -0300
+
+    ||vista con todos los getters y setters,|| controlador empezado pero con ERRORES||falta arreglar el controlador y hacer el modelo
+
+[33mcommit 855bd6e13c23e9b1e1fb86195c6309cb271373ea[m
+Author: Franco <frncmarchetta@gmail.com>
+Date:   Sun Aug 4 21:06:12 2024 -0300
+
+    primera estructuracion del projecto

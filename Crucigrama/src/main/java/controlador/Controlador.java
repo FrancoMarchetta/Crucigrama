@@ -77,7 +77,7 @@ public class Controlador implements ActionListener {
         this.startJogo.getE34().addActionListener(this);
         
         
-       
+      
 
         
         
@@ -99,9 +99,6 @@ public class Controlador implements ActionListener {
                 volverInicio();
             }else if(e.getSource()==startJogo.getBtnTerminar()){
                 botonComparar();
-            }if(e.getSource() == startJogo.getE1()){
-                startTablero.getTablero()[3][0] = startJogo.getE1().getText();
-                startTablero.MostrarTablero(startTablero.getTablero());
             }
         }catch(Exception ex){
             System.out.println("ERROR...");
@@ -135,7 +132,7 @@ public class Controlador implements ActionListener {
     }
     
     private void botonComparar(){
-      startTablero.compararTableros();
+      startTablero.compararTableros(modelo.Tablero.tablero);
     }
     
     
