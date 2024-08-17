@@ -26,6 +26,7 @@ public class Tablero {
     }
     
     public static String[][] iniciarTableroResuelto() {
+        
         String[][] resuelto = {
             {" ", " ", " ", " ", " ", " ", " ", "C", " ", " ", " ", " ", " "},
             {" ", " ", " ", " ", " ", " ", " ", "A", " ", " ", " ", " ", " "},
@@ -40,14 +41,20 @@ public class Tablero {
             {" ", " ", " ", " ", "E", " ", " ", " ", " ", " ", " ", " ", " "}
         };
         
+        
+        
+        
+        
+        
+        
         return resuelto;
     }
     
-    public static void mostrarResuelto(String[][] resuelto){
+    public static void mostrarResuelto(String[][] resuelto,String[][]res){
         
         for (int i = 0; i < 11; i++) {
             for (int j = 0; j < 13; j++) {
-                System.out.print(" " + resuelto[i][j]);
+                System.out.print(" " + res[i][j]);
             }
         System.out.println(" ");
     }
@@ -92,6 +99,9 @@ public class Tablero {
     
     public boolean compararTableros(String[][] tablero, String[][] resuelto){
         boolean tablerosSonIguales = (false);
+        String[][] res;
+        
+        res = iniciarTableroResuelto();
         
         tablero[3][0] = vista.Jogo.e1.getText();
         tablero[3][1] = vista.Jogo.e2.getText();
@@ -128,26 +138,34 @@ public class Tablero {
         tablero[8][9] = vista.Jogo.e33.getText();
         tablero[9][9] = vista.Jogo.e34.getText();
         
+        
+        
 
         for(int i = 0; i<11; i++){
             for(int j = 0; j<13; j++){
-                if (tablero[i][j] == resuelto[i][j]) {
+                if (tablero[i][j] == res[i][j]) {
                 tablerosSonIguales = (true);
-                System.out.println("ESTA BIEN. LOS TABLEROS SON IGUALES");
-                MostrarTablero(tablero);
-                System.out.println("--------------------------------");
-                mostrarResuelto(resuelto);
+                
+                
                 }else{
                     tablerosSonIguales = (false);
-                    System.out.println("ESTA MAL. LOS TABLEROS SON DISTINTOS");
-                    MostrarTablero(tablero);
-                    System.out.println("--------------------------------");
-                    mostrarResuelto(resuelto);
+                    
+                    
 
                 }
            }
        }
         
+        if(tablerosSonIguales == (true)){
+            System.out.println("Ganaste");
+            
+        }else{
+            System.out.println("perdiste");
+        }
+        
+        MostrarTablero(tablero);
+        System.out.println("--------------------------------");
+        mostrarResuelto(resuelto,res);
         
         
         
