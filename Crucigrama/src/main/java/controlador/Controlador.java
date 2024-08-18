@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package controlador;
+import java.awt.Desktop;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,6 +12,12 @@ import javax.swing.event.DocumentListener;
 import vista.*;
 import modelo.*;
 import java.io.File; 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 
 
@@ -113,6 +120,29 @@ public class Controlador implements ActionListener {
         startMenu.dispose();
         startInstrucciones.setVisible(true);
         */
+        
+        ArrayList<String> instrucciones = new ArrayList<>();
+
+    try {
+        Scanner scanner = new Scanner(getClass().getResourceAsStream("instrucciones.txt"));
+        while (scanner.hasNextLine()) {
+            instrucciones.add(scanner.nextLine());//Agrego todo el texto a un arrayList
+        }
+        scanner.close();
+        //AgregoStringbuilder
+        StringBuilder mensaje = new StringBuilder();
+        for (String instruccion : instrucciones) {
+             mensaje.append(instruccion).append("\n"); // Agrego cada línea con un salto de línea
+            System.out.println(instruccion);//Lo imprimoen consola
+        }
+        JOptionPane.showMessageDialog(null, mensaje.toString(), "instrucciones", JOptionPane.INFORMATION_MESSAGE);
+    } catch (Exception eee) {
+        System.out.println("ERROR: No se pudo encontrar o leer el archivo de instrucciones.");
+    }
+        
+        
+        
+        
         
     }
     

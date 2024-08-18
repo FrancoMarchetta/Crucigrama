@@ -150,12 +150,12 @@ public class Tablero {
                 MostrarTablero(tablero);
                 System.out.println("--------------------------------");
                 mostrarResuelto(tablero,res);
-                return false; // Sale del método si encuentra una diferencia
+                return false; 
             }
         }
     }
 
-    // Si recorrió todo el tablero y no encontró diferencias
+    
     System.out.println("ESTÁ BIEN. LOS TABLEROS SON IGUALES");
     MostrarTablero(tablero);
     System.out.println("--------------------------------");
