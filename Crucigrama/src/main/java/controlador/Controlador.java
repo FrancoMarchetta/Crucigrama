@@ -121,27 +121,6 @@ public class Controlador implements ActionListener {
         startInstrucciones.setVisible(true);
         */
         
-        ArrayList<String> instrucciones = new ArrayList<>();
-
-    try {
-        Scanner scanner = new Scanner(getClass().getResourceAsStream("instrucciones.txt"));
-        while (scanner.hasNextLine()) {
-            instrucciones.add(scanner.nextLine());//Agrego todo el texto a un arrayList
-        }
-        scanner.close();
-        //AgregoStringbuilder
-        StringBuilder mensaje = new StringBuilder();
-        for (String instruccion : instrucciones) {
-             mensaje.append(instruccion).append("\n"); // Agrego cada línea con un salto de línea
-            System.out.println(instruccion);//Lo imprimoen consola
-        }
-        JOptionPane.showMessageDialog(null, mensaje.toString(), "instrucciones", JOptionPane.INFORMATION_MESSAGE);
-    } catch (Exception eee) {
-        System.out.println("ERROR: No se pudo encontrar o leer el archivo de instrucciones.");
-    }
-        
-        
-        
         
         
     }
@@ -166,7 +145,7 @@ public class Controlador implements ActionListener {
     }
     
     private void botonComparar(){
-      startTablero.compararTableros(modelo.Tablero.tablero, modelo.Tablero.resuelto);
+      startJuego.compararTableros(modelo.Tablero.tablero, modelo.Tablero.resuelto);
     }
     
     
