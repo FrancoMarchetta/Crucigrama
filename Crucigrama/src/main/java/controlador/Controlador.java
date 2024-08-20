@@ -54,7 +54,9 @@ public class Controlador implements ActionListener {
         this.startInstrucciones.getBoton_volver().addActionListener(this);
         //ActionListener de el botones del juego
         this.startJogo.getBtnTerminar().addActionListener(this);
-         
+        this.startGanaste.getBotonReiniciar().addActionListener(this);
+        this.startGanaste.getBotonSalirGanaste().addActionListener(this);
+ 
         
     }
 
@@ -65,7 +67,7 @@ public class Controlador implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         try{
             if(e.getSource()==startMenu.getBoton_instucciones()){
-                MostrarInstrucciones();
+               MostrarInstrucciones();
             }else if(e.getSource()==startMenu.getBoton_jugar()){     //<----------- aca los botones del menu(jugar,salir,ver las instrucciones)
                 MostrarJuego();
             }else if(e.getSource()==startMenu.getBoton_salir()){
@@ -77,10 +79,10 @@ public class Controlador implements ActionListener {
                 if(Juego.compararTableros(tablero, resuelto) == (true)){
                     mostrarGanaste();
                 }
-            }else if(e.getSource()==startGanaste.getBotonSalirGanaste()){
-                salirJuego();
+            }else if(e.getSource()== startGanaste.getBotonSalirGanaste()){
+                System.exit(0);
             }else if(e.getSource()==startGanaste.getBotonReiniciar()){
-                MostrarJuego();
+                MostrarJuegoGanaste();
             }
         }catch(Exception ex){
             System.out.println("ERROR...");
@@ -105,11 +107,21 @@ public class Controlador implements ActionListener {
     private void salirJuego() {
         System.exit(0);
     }
+        String nombreJugador;
     
     private void MostrarJuego(){
         startMenu.dispose();
+        nombreJugador = Menu.campo_nombre.getText();
         startJogo.setVisible(true);
         
+        String[][] tablero = startTablero.IniciarTablero();
+        startTablero.MostrarTablero(tablero);
+    }
+    
+    private void MostrarJuegoGanaste(){
+        startGanaste.dispose();
+        startJogo.dispose();
+        startJogo.setVisible(true);
         String[][] tablero = startTablero.IniciarTablero();
         startTablero.MostrarTablero(tablero);
     }
@@ -121,6 +133,7 @@ public class Controlador implements ActionListener {
     private void mostrarGanaste(){
         startJogo.dispose();
         startGanaste.setVisible(true);
+        Ventana_Ganaste.espacio_nombre_jugador.setText(nombreJugador);
     }
     
     

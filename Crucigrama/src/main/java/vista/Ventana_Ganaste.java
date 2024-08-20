@@ -29,13 +29,11 @@ public class Ventana_Ganaste extends javax.swing.JFrame {
         return BotonSalirGanaste;
     }
 
-    public JLabel getEspacioNombreJuegador() {
-        return espacioNombreJuegador;
+    public JLabel getEspacioNombreJugador() {
+        return espacio_nombre_jugador;
     }
 
-    public JLabel getEspacioNombreJuegador1() {
-        return espacioNombreJuegador1;
-    }
+    
 
     public JLabel getjLabel2() {
         return jLabel2;
@@ -57,13 +55,11 @@ public class Ventana_Ganaste extends javax.swing.JFrame {
         this.BotonSalirGanaste = BotonSalirGanaste;
     }
 
-    public void setEspacioNombreJuegador(JLabel espacioNombreJuegador) {
-        this.espacioNombreJuegador = espacioNombreJuegador;
+    public void setEspacioNombreJugador(JLabel espacioNombreJugador) {
+        this.espacio_nombre_jugador = espacioNombreJugador;
     }
 
-    public void setEspacioNombreJuegador1(JLabel espacioNombreJuegador1) {
-        this.espacioNombreJuegador1 = espacioNombreJuegador1;
-    }
+   
 
     public void setjLabel2(JLabel jLabel2) {
         this.jLabel2 = jLabel2;
@@ -89,20 +85,20 @@ public class Ventana_Ganaste extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        espacioNombreJuegador = new javax.swing.JLabel();
+        espacio_nombre_jugador = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        espacioNombreJuegador1 = new javax.swing.JLabel();
         BotonSalirGanaste = new javax.swing.JButton();
         BotonReiniciar = new javax.swing.JButton();
+        espacio_texto1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(51, 102, 255));
 
-        espacioNombreJuegador.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        espacioNombreJuegador.setForeground(new java.awt.Color(0, 0, 0));
-        espacioNombreJuegador.setText("tiempo");
+        espacio_nombre_jugador.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        espacio_nombre_jugador.setForeground(new java.awt.Color(0, 0, 0));
+        espacio_nombre_jugador.setText("nombre");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
@@ -111,10 +107,6 @@ public class Ventana_Ganaste extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("GANASTE!!!");
-
-        espacioNombreJuegador1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        espacioNombreJuegador1.setForeground(new java.awt.Color(0, 0, 0));
-        espacioNombreJuegador1.setText("nombre");
 
         BotonSalirGanaste.setBackground(new java.awt.Color(0, 153, 153));
         BotonSalirGanaste.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -134,6 +126,10 @@ public class Ventana_Ganaste extends javax.swing.JFrame {
             }
         });
 
+        espacio_texto1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        espacio_texto1.setForeground(new java.awt.Color(0, 0, 0));
+        espacio_texto1.setText("tiempo");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -141,8 +137,8 @@ public class Ventana_Ganaste extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(73, 73, 73)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(espacioNombreJuegador, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(espacio_texto1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(130, 130, 130)
@@ -150,25 +146,26 @@ public class Ventana_Ganaste extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 227, Short.MAX_VALUE)
                 .addComponent(BotonSalirGanaste, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(123, 123, 123))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(espacio_nombre_jugador, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(222, 222, 222))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(192, 192, 192)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(427, Short.MAX_VALUE)))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                    .addContainerGap(403, Short.MAX_VALUE)
-                    .addComponent(espacioNombreJuegador1, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(216, 216, 216)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(130, 130, 130)
+                .addGap(56, 56, 56)
+                .addComponent(espacio_nombre_jugador)
+                .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(espacioNombreJuegador))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 266, Short.MAX_VALUE)
+                    .addComponent(espacio_texto1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 278, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BotonSalirGanaste, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BotonReiniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -177,11 +174,6 @@ public class Ventana_Ganaste extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(40, 40, 40)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(484, Short.MAX_VALUE)))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(40, 40, 40)
-                    .addComponent(espacioNombreJuegador1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(484, Short.MAX_VALUE)))
         );
 
@@ -248,8 +240,8 @@ public class Ventana_Ganaste extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonReiniciar;
     private javax.swing.JButton BotonSalirGanaste;
-    private javax.swing.JLabel espacioNombreJuegador;
-    private javax.swing.JLabel espacioNombreJuegador1;
+    public static javax.swing.JLabel espacio_nombre_jugador;
+    public static javax.swing.JLabel espacio_texto1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
