@@ -24,6 +24,7 @@ public class Crucigrama {
          Menu startMenu = new Menu();
         Instrucciones startInstrucciones = new Instrucciones();
         Jogo startJogo = new Jogo();
+        Ventana_Ganaste startGanaste = new Ventana_Ganaste();
 
         // Instanciación del modelo
         Juego startJuego = new Juego();
@@ -32,7 +33,7 @@ public class Crucigrama {
         
         
         // Instanciación del controlador
-        Controlador controlador = new Controlador(startMenu, startInstrucciones, startJogo, startTablero, startJuego);
+        Controlador controlador = new Controlador(startMenu, startInstrucciones, startJogo, startTablero, startJuego,startGanaste);
         
         startMenu.setVisible(true);
         

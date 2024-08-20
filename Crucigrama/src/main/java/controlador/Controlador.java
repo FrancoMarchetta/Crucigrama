@@ -18,6 +18,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import static modelo.Tablero.resuelto;
+import static modelo.Tablero.tablero;
 
 
 
@@ -34,60 +36,25 @@ public class Controlador implements ActionListener {
     private final Jogo startJogo;
     private final Tablero startTablero;
     private final Juego startJuego;
+    private final Ventana_Ganaste startGanaste;
 
-    public Controlador(Menu startMenu, Instrucciones startInstrucciones,Jogo startJogo, Tablero startTablero, Juego startJuego) {
+    public Controlador(Menu startMenu, Instrucciones startInstrucciones,Jogo startJogo, Tablero startTablero, Juego startJuego, Ventana_Ganaste startGanaste) {
         this.startMenu = startMenu;
         this.startInstrucciones = startInstrucciones;
         this.startJogo = startJogo;
         this.startTablero = startTablero;
         this.startJuego = startJuego;
+        this.startGanaste = startGanaste;
         //todos los action listeners:
+        
         this.startMenu.getBoton_instucciones().addActionListener(this);
         this.startMenu.getBoton_jugar().addActionListener(this);
         this.startMenu.getBoton_salir().addActionListener(this);
         //ActionListener del boton de las instrucciones
         this.startInstrucciones.getBoton_volver().addActionListener(this);
-        //ActionListener de los botones del juego
+        //ActionListener de el botones del juego
         this.startJogo.getBtnTerminar().addActionListener(this);
-        this.startJogo.getE1().addActionListener(this);
-        this.startJogo.getE2().addActionListener(this);
-        this.startJogo.getE3().addActionListener(this);
-        this.startJogo.getE4().addActionListener(this);
-        this.startJogo.getE5().addActionListener(this);
-        this.startJogo.getE6().addActionListener(this);
-        this.startJogo.getE7().addActionListener(this);
-        this.startJogo.getE8().addActionListener(this);
-        this.startJogo.getE9().addActionListener(this);
-        this.startJogo.getE10().addActionListener(this);
-        this.startJogo.getE11().addActionListener(this);
-        this.startJogo.getE12().addActionListener(this);
-        this.startJogo.getE13().addActionListener(this);
-        this.startJogo.getE14().addActionListener(this);
-        this.startJogo.getE15().addActionListener(this);
-        this.startJogo.getE16().addActionListener(this);
-        this.startJogo.getE17().addActionListener(this);
-        this.startJogo.getE18().addActionListener(this);
-        this.startJogo.getE19().addActionListener(this);
-        this.startJogo.getE20().addActionListener(this);
-        this.startJogo.getE21().addActionListener(this);
-        this.startJogo.getE22().addActionListener(this);
-        this.startJogo.getE23().addActionListener(this);
-        this.startJogo.getE24().addActionListener(this);
-        this.startJogo.getE25().addActionListener(this);
-        this.startJogo.getE26().addActionListener(this);
-        this.startJogo.getE27().addActionListener(this);
-        this.startJogo.getE28().addActionListener(this);
-        this.startJogo.getE29().addActionListener(this);
-        this.startJogo.getE30().addActionListener(this);
-        this.startJogo.getE31().addActionListener(this);
-        this.startJogo.getE32().addActionListener(this);
-        this.startJogo.getE33().addActionListener(this);
-        this.startJogo.getE34().addActionListener(this);
-        
-        
-      
-
-        
+         
         
     }
 
@@ -107,6 +74,13 @@ public class Controlador implements ActionListener {
                 volverInicio();
             }else if(e.getSource()==startJogo.getBtnTerminar()){
                 botonComparar();
+                if(Juego.compararTableros(tablero, resuelto) == (true)){
+                    mostrarGanaste();
+                }
+            }else if(e.getSource()==startGanaste.getBotonSalirGanaste()){
+                salirJuego();
+            }else if(e.getSource()==startGanaste.getBotonReiniciar()){
+                MostrarJuego();
             }
         }catch(Exception ex){
             System.out.println("ERROR...");
@@ -116,13 +90,9 @@ public class Controlador implements ActionListener {
     }
     //mostrar instrucciones
     private void MostrarInstrucciones(){
-        /*
         startMenu.dispose();
         startInstrucciones.setVisible(true);
-        */
-        
-        
-        
+    
     }
     
     //volver de las instrucciones al menu
@@ -146,6 +116,11 @@ public class Controlador implements ActionListener {
     
     private void botonComparar(){
       startJuego.compararTableros(modelo.Tablero.tablero, modelo.Tablero.resuelto);
+    }
+    
+    private void mostrarGanaste(){
+        startJogo.dispose();
+        startGanaste.setVisible(true);
     }
     
     

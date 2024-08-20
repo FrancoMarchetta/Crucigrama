@@ -4,6 +4,8 @@
  */
 package modelo;
 
+import java.io.InputStream;
+import java.util.ArrayList;
 import vista.*;
 
 
@@ -14,7 +16,7 @@ import vista.*;
 public class Juego {
     int puntaje;
     
-    public boolean compararTableros(String[][] tablero, String[][] resuelto){
+    public static boolean compararTableros(String[][] tablero, String[][] resuelto){
         String[][] res;
         
         res = Tablero.iniciarTableroResuelto();
@@ -78,8 +80,13 @@ public class Juego {
     System.out.println("--------------------------------");
     Tablero.mostrarResuelto(tablero,res);
     return tablerosSonIguales;
- 
+    
     }
+    
+    
+    
+    
+   
     
     
     
