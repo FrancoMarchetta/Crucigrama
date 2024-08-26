@@ -7,6 +7,7 @@ package modelo;
 import java.io.InputStream;
 import java.util.ArrayList;
 import vista.*;
+import controlador.*;
 
 
 /**
@@ -20,12 +21,6 @@ public class Juego {
         String[][] res;
         
         res = Tablero.iniciarTableroResuelto();
-        
-        /*
-        Modelo -> Logica del juego codificado
-        Vista -> Vista
-        Controlador -> Modelo + Vista
-        */
         
         tablero[3][0] = vista.Jogo.e1.getText().toUpperCase();
         tablero[3][1] = vista.Jogo.e2.getText().toUpperCase();
@@ -66,7 +61,7 @@ public class Juego {
         
 
          boolean tablerosSonIguales = true;
-
+ 
     for (int i = 0; i < 11; i++) {
         for (int j = 0; j < 13; j++) {
             if (!tablero[i][j].equals(res[i][j])) {
@@ -75,23 +70,41 @@ public class Juego {
                 Tablero.MostrarTablero(tablero);
                 System.out.println("--------------------------------");
                 Tablero.mostrarResuelto(tablero,res);
+                
+
+                
+                if(tablero[i][j].length()>1){
+                    System.out.println("acaaaaaaa" + tablero[i][j]);
+                    tablero[i][j] = " ";
+                }
                 return false; 
             }
         }
     }
-
     
     System.out.println("ESTÁ BIEN. LOS TABLEROS SON IGUALES");
     Tablero.MostrarTablero(tablero);
     System.out.println("--------------------------------");
     Tablero.mostrarResuelto(tablero,res);
+    
+    
+    
+    
+    
+    
     return tablerosSonIguales;
     
     }
     
     
     
-    
+    public static void igualarTableros(String[][] tablero, String[][] resuelto){
+        for (int i = 0; i < 11; i++) {
+            for (int j = 0; j < 13; j++) {
+                
+            }
+        }
+    }
     
     
    

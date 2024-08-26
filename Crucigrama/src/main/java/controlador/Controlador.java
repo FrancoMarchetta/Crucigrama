@@ -133,9 +133,10 @@ public class Controlador implements ActionListener {
     
     private void MostrarJuegoGanaste(){
         startGanaste.dispose();
-        startJogo.dispose();
+        //startJogo.dispose();
         startJogo.setVisible(true);
         String[][] tablero = startTablero.IniciarTablero();
+        vaciarTablero();
         startTablero.MostrarTablero(tablero);
     }
     
@@ -151,7 +152,44 @@ public class Controlador implements ActionListener {
         
     }
     
-    //archivos
+    public static void vaciarTablero(){
+        vista.Jogo.e1.setText(" ");
+        vista.Jogo.e2.setText(" ");
+        vista.Jogo.e3.setText(" ");
+        vista.Jogo.e4.setText(" ");
+        vista.Jogo.e5.setText(" ");
+        vista.Jogo.e6.setText(" ");
+        vista.Jogo.e7.setText(" ");
+        vista.Jogo.e8.setText(" ");
+        vista.Jogo.e9.setText(" ");
+        vista.Jogo.e10.setText(" ");
+        vista.Jogo.e11.setText(" ");
+        vista.Jogo.e12.setText(" ");
+        vista.Jogo.e13.setText(" ");
+        vista.Jogo.e14.setText(" ");
+        vista.Jogo.e15.setText(" ");
+        vista.Jogo.e16.setText(" ");
+        vista.Jogo.e17.setText(" ");
+        vista.Jogo.e18.setText(" ");
+        vista.Jogo.e19.setText(" ");
+        vista.Jogo.e20.setText(" ");
+        vista.Jogo.e21.setText(" ");
+        vista.Jogo.e22.setText(" ");
+        vista.Jogo.e23.setText(" ");
+        vista.Jogo.e24.setText(" ");
+        vista.Jogo.e25.setText(" ");
+        vista.Jogo.e26.setText(" ");
+        vista.Jogo.e27.setText(" ");
+        vista.Jogo.e28.setText(" ");
+        vista.Jogo.e29.setText(" ");
+        vista.Jogo.e30.setText(" ");
+        vista.Jogo.e31.setText(" ");
+        vista.Jogo.e32.setText(" ");
+        vista.Jogo.e33.setText(" ");
+        vista.Jogo.e34.setText(" ");
+    }
+    
+    //-------------archivos------------
     
     File archivo;
     
