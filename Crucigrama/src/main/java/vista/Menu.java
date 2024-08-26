@@ -106,7 +106,7 @@ public class Menu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(0, 102, 255));
+        jPanel1.setBackground(new java.awt.Color(153, 153, 255));
 
         boton_instucciones.setBackground(new java.awt.Color(0, 153, 153));
         boton_instucciones.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N

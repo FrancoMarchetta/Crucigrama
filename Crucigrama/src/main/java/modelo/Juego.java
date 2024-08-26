@@ -21,6 +21,12 @@ public class Juego {
         
         res = Tablero.iniciarTableroResuelto();
         
+        /*
+        Modelo -> Logica del juego codificado
+        Vista -> Vista
+        Controlador -> Modelo + Vista
+        */
+        
         tablero[3][0] = vista.Jogo.e1.getText().toUpperCase();
         tablero[3][1] = vista.Jogo.e2.getText().toUpperCase();
         tablero[3][2] = vista.Jogo.e3.getText().toUpperCase();

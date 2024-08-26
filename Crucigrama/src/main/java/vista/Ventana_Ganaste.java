@@ -33,6 +33,15 @@ public class Ventana_Ganaste extends javax.swing.JFrame {
         return espacio_nombre_jugador;
     }
 
+    public static JLabel getEspacio_tiempo() {
+        return espacio_tiempo;
+    }
+
+    public static void setEspacio_tiempo(JLabel espacio_tiempo) {
+        Ventana_Ganaste.espacio_tiempo = espacio_tiempo;
+    }
+
+    
     
 
     public JLabel getjLabel2() {
@@ -90,11 +99,11 @@ public class Ventana_Ganaste extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         BotonSalirGanaste = new javax.swing.JButton();
         BotonReiniciar = new javax.swing.JButton();
-        espacio_texto1 = new javax.swing.JLabel();
+        espacio_tiempo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(51, 102, 255));
+        jPanel1.setBackground(new java.awt.Color(153, 153, 255));
 
         espacio_nombre_jugador.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         espacio_nombre_jugador.setForeground(new java.awt.Color(0, 0, 0));
@@ -126,9 +135,9 @@ public class Ventana_Ganaste extends javax.swing.JFrame {
             }
         });
 
-        espacio_texto1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        espacio_texto1.setForeground(new java.awt.Color(0, 0, 0));
-        espacio_texto1.setText("tiempo");
+        espacio_tiempo.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        espacio_tiempo.setForeground(new java.awt.Color(0, 0, 0));
+        espacio_tiempo.setText("tiempo");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -138,7 +147,7 @@ public class Ventana_Ganaste extends javax.swing.JFrame {
                 .addGap(73, 73, 73)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(espacio_texto1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(espacio_tiempo, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(130, 130, 130)
@@ -164,7 +173,7 @@ public class Ventana_Ganaste extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(espacio_texto1))
+                    .addComponent(espacio_tiempo))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 278, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BotonSalirGanaste, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -241,7 +250,7 @@ public class Ventana_Ganaste extends javax.swing.JFrame {
     private javax.swing.JButton BotonReiniciar;
     private javax.swing.JButton BotonSalirGanaste;
     public static javax.swing.JLabel espacio_nombre_jugador;
-    public static javax.swing.JLabel espacio_texto1;
+    public static javax.swing.JLabel espacio_tiempo;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;

@@ -7,8 +7,8 @@ import java.awt.Desktop;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
+import java.io.BufferedReader;
+
 import vista.*;
 import modelo.*;
 import java.io.File; 
@@ -37,6 +37,8 @@ public class Controlador implements ActionListener {
     private final Tablero startTablero;
     private final Juego startJuego;
     private final Ventana_Ganaste startGanaste;
+    
+   
 
     public Controlador(Menu startMenu, Instrucciones startInstrucciones,Jogo startJogo, Tablero startTablero, Juego startJuego, Ventana_Ganaste startGanaste) {
         this.startMenu = startMenu;
@@ -56,7 +58,10 @@ public class Controlador implements ActionListener {
         this.startJogo.getBtnTerminar().addActionListener(this);
         this.startGanaste.getBotonReiniciar().addActionListener(this);
         this.startGanaste.getBotonSalirGanaste().addActionListener(this);
- 
+        
+        
+        
+        
         
     }
 
@@ -92,8 +97,16 @@ public class Controlador implements ActionListener {
     }
     //mostrar instrucciones
     private void MostrarInstrucciones(){
+        /*
         startMenu.dispose();
         startInstrucciones.setVisible(true);
+        */
+        
+        File archivo;
+        
+        archivo = new File("archivo.txt");
+        leer();
+        
     
     }
     
@@ -131,11 +144,82 @@ public class Controlador implements ActionListener {
     }
     
     private void mostrarGanaste(){
+       
         startJogo.dispose();
         startGanaste.setVisible(true);
         Ventana_Ganaste.espacio_nombre_jugador.setText(nombreJugador);
+        
+    }
+    
+    //archivos
+    
+    File archivo;
+    
+        private void crearArchivo(){
+
+           archivo= new File("archivo.txt");
+           try{
+               if (archivo.createNewFile()){
+                   System.out.println("Archivo creado con exito");
+               }
+               else{
+                   System.out.println("Error al crear archivo");
+               }
+
+
+       }catch(IOException exepcion){
+        exepcion.printStackTrace(System.out);
+
+        }
+
+    }
+    
+        private void escribir(){
+        try{
+            FileWriter escritura= new FileWriter(archivo);
+            escritura.write("¿Que es un crucigrama?");
+            escritura.write("Un crucigrama es un juego de palabras donde debes");
+            escritura.write("llenar una cuadricula con letras, formando palabras que se");
+            escritura.write("cruzan horizontal y verticalmente. Cada palabra esta definida por");
+            escritura.write("una pista que te ayuda a descubrirla");
+            escritura.write("");
+            escritura.write("Objetivo del juego:");
+            escritura.write("El objetivo es llenar todas las casillas de la cuadricula con las letras");
+            escritura.write("correctas para formar palabras basadas en las pistas proporcionadas");
+
+            escritura.close(); 
+            System.out.println("texto añadido con exito");
+
+        }catch(IOException excepcion){
+            excepcion.printStackTrace(System.out);
+        }
+    }
+    
+        
+private void leer(){
+    
+    String contenido;
+    StringBuilder textoCompleto = new StringBuilder(); 
+    
+    try{
+        FileReader lector= new FileReader("Archivos/instrucciones.txt"); 
+        BufferedReader lectura= new BufferedReader(lector); 
+        contenido= lectura.readLine();// 
+        
+        while(contenido != null){
+            System.out.println(contenido);
+            textoCompleto.append(contenido).append("\n"); 
+            contenido=lectura.readLine();
+            
+        }
+        
+        System.out.println(contenido); 
+         JOptionPane.showMessageDialog(null, textoCompleto.toString(), "Contenido del Archivo", JOptionPane.INFORMATION_MESSAGE);
+        
+    }catch (IOException excepcion){
+        excepcion.printStackTrace(System.out);
     }
     
     
-    
+    }
 }

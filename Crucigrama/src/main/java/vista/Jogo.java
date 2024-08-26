@@ -17,9 +17,6 @@ import javax.swing.JTextField;
  */
 public class Jogo extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Jogo
-     */
     public Jogo() {
         initComponents();
         setLocationRelativeTo(null);
@@ -385,8 +382,6 @@ public class Jogo extends javax.swing.JFrame {
     public void setPistas(JTextArea pistas) {
         this.pistas = pistas;
     }
-    
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -452,7 +447,7 @@ public class Jogo extends javax.swing.JFrame {
         pistas.setText("1-El arte y la técnica de fabricar objetos de\n barro, arcilla o porcelana mediante un proceso de\n moldeado y cocción\n\n2- El resultado positivo de un esfuerzo o actividad,\n cuando se alcanza un objetivo deseado o se obtiene\n el reconocimiento esperado\n\n3-En economía: Relacionado con países o\n economías que están en vías de desarrollo\n y crecimiento rápido, pero que aún no han alcanzado el estatus\n de economías desarrolladas. \n\n4-Aparato para registrar imágenes\n\n5-es un adjetivo que describe a una\n persona que es cortés, afable y que trata\n a los demás con respeto y consideración\n\n6-es un sustantivo que se refiere\n a una persona con la que se tiene\n una relación de afecto, confianza y\n compañerismo.\n");
         jScrollPane1.setViewportView(pistas);
 
-        fondo.setBackground(new java.awt.Color(51, 51, 255));
+        fondo.setBackground(new java.awt.Color(153, 153, 255));
 
         e25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -670,7 +665,8 @@ public class Jogo extends javax.swing.JFrame {
 
         jLabel6.setText("6");
 
-        btnTerminar.setBackground(new java.awt.Color(0, 102, 102));
+        btnTerminar.setBackground(new java.awt.Color(0, 255, 0));
+        btnTerminar.setForeground(new java.awt.Color(0, 0, 0));
         btnTerminar.setText("TERMINAR");
 
         javax.swing.GroupLayout fondoLayout = new javax.swing.GroupLayout(fondo);
@@ -851,7 +847,7 @@ public class Jogo extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(33, 33, 33)
+                .addContainerGap()
                 .addComponent(fondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -880,141 +876,141 @@ public class Jogo extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void e25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e25ActionPerformed
+    private void e11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e11ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_e25ActionPerformed
-
-    private void e26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e26ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e26ActionPerformed
-
-    private void e12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e12ActionPerformed
-
-    private void e27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e27ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e27ActionPerformed
-
-    private void e1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e1ActionPerformed
-
-    private void e28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e28ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e28ActionPerformed
-
-    private void e3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e3ActionPerformed
-
-    private void e29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e29ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e29ActionPerformed
-
-    private void e4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e4ActionPerformed
-
-    private void e30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e30ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e30ActionPerformed
-
-    private void e5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e5ActionPerformed
-
-    private void e31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e31ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e31ActionPerformed
-
-    private void e6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e6ActionPerformed
-
-    private void e32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e32ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e32ActionPerformed
-
-    private void e13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e13ActionPerformed
-
-    private void e33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e33ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e33ActionPerformed
-
-    private void e14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e14ActionPerformed
-
-    private void e34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e34ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e34ActionPerformed
-
-    private void e15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e15ActionPerformed
-
-    private void e16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e16ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e16ActionPerformed
-
-    private void e17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e17ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e17ActionPerformed
-
-    private void e18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e18ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e18ActionPerformed
-
-    private void e19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e19ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e19ActionPerformed
-
-    private void e20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e20ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e20ActionPerformed
-
-    private void e7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e7ActionPerformed
-
-    private void e8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e8ActionPerformed
-
-    private void e22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e22ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e22ActionPerformed
-
-    private void e23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e23ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e23ActionPerformed
-
-    private void e2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e2ActionPerformed
-
-    private void e24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e24ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e24ActionPerformed
-
-    private void e9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e9ActionPerformed
-
-    private void e21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e21ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_e21ActionPerformed
+    }//GEN-LAST:event_e11ActionPerformed
 
     private void e10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e10ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_e10ActionPerformed
 
-    private void e11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e11ActionPerformed
+    private void e21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e21ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_e11ActionPerformed
+    }//GEN-LAST:event_e21ActionPerformed
+
+    private void e9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e9ActionPerformed
+
+    private void e24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e24ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e24ActionPerformed
+
+    private void e2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e2ActionPerformed
+
+    private void e23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e23ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e23ActionPerformed
+
+    private void e22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e22ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e22ActionPerformed
+
+    private void e8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e8ActionPerformed
+
+    private void e7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e7ActionPerformed
+
+    private void e20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e20ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e20ActionPerformed
+
+    private void e19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e19ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e19ActionPerformed
+
+    private void e18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e18ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e18ActionPerformed
+
+    private void e17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e17ActionPerformed
+
+    private void e16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e16ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e16ActionPerformed
+
+    private void e15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e15ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e15ActionPerformed
+
+    private void e34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e34ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e34ActionPerformed
+
+    private void e14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e14ActionPerformed
+
+    private void e33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e33ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e33ActionPerformed
+
+    private void e13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e13ActionPerformed
+
+    private void e32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e32ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e32ActionPerformed
+
+    private void e6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e6ActionPerformed
+
+    private void e31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e31ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e31ActionPerformed
+
+    private void e5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e5ActionPerformed
+
+    private void e30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e30ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e30ActionPerformed
+
+    private void e4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e4ActionPerformed
+
+    private void e29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e29ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e29ActionPerformed
+
+    private void e3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e3ActionPerformed
+
+    private void e28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e28ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e28ActionPerformed
+
+    private void e1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e1ActionPerformed
+
+    private void e27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e27ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e27ActionPerformed
+
+    private void e12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e12ActionPerformed
+
+    private void e26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e26ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e26ActionPerformed
+
+    private void e25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e25ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e25ActionPerformed
 
     /**
      * @param args the command line arguments
